@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Số lớn nhất trong 3 số</title>
+</head>
+<script>
+    function tim(){
+        var x= window.document.nhap.so.value;
+        var a = x.split(",");
+        var max = parseFloat(a[0]);
+        for(var i=0 ; i<3 ; i++){
+            if(max<parseFloat(a[i])){
+              max=parseFloat(a[i]);  
+            }
+            
+        } window.document.nhap.kq.value=max;
+    }
+</script>
+<body>
+    <form name="nhap">
+    <table align="center" border="1" style="border-collapse: collapse; background-color: greenyellow;">
+        <tr>
+            <th>Nhập ba số</th>
+            <td><input type="text" name="so"></td>
+        </tr>
+        <tr>
+            <th>Số lớn nhất trong ba số là </th>
+            <td><input type="text" name="kq"> </td>
+        </tr>
+        <tr>
+            <td style="text-align: center;" colspan="2">
+                <input type="button" value="Tìm" onclick="tim();">
+                <input type="reset" value="Xóa">
+            </td>
+        </tr>
+    </table></form>
+</body>
+</html>
